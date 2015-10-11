@@ -24,32 +24,21 @@
 
 package de.muspellheim.calculator;
 
-import cucumber.api.java.de.Dann;
-import cucumber.api.java.de.Gegebensei;
-import cucumber.api.java.de.Wenn;
-
-import static org.junit.Assert.assertEquals;
-
 /**
- * Implementiert die Schritt des Tests der Funktionalitäten des Taschenrechners.
+ * Ein Taschenrechner.
  */
-public class CalculatorStepdefs {
+public class Calculator {
 
-    private Calculator calculator = new Calculator();
+    public void enter(int number) {
 
-    @Gegebensei("^ich habe (\\d+) im Taschenrechner eingegeben$")
-    public void zahlEingegeben(int zahl) throws Throwable {
-        calculator.enter(zahl);
     }
 
-    @Wenn("^ich Addieren drücke$")
-    public void addieren() throws Throwable {
-        calculator.add();
+    public void add() {
+
     }
 
-    @Dann("^sollte das Ergebnis (\\d+) auf dem Bildschirm erscheinen$")
-    public void pruefeErgebnis(int erwartetesErgebnis) throws Throwable {
-        assertEquals(erwartetesErgebnis, calculator.result());
+    public int result() {
+        return 0;
     }
 
 }
