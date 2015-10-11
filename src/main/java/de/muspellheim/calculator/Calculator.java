@@ -24,21 +24,27 @@
 
 package de.muspellheim.calculator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Ein Taschenrechner.
  */
 public class Calculator {
 
-    public void enter(int number) {
+    private List<Integer> numbers = new ArrayList<>();
+    private int result;
 
+    public void enter(int number) {
+        numbers.add(number);
     }
 
     public void add() {
-
+        result = numbers.stream().reduce(0, Integer::sum);
     }
 
     public int result() {
-        return 0;
+        return result;
     }
 
 }
